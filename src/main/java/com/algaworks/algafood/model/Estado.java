@@ -1,4 +1,4 @@
-package com.algaworks.algafood.domain.model;
+package com.algaworks.algafood.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -8,7 +8,7 @@ import javax.persistence.*;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 @Entity
-public class Cidade {
+public class Estado {
 
     @EqualsAndHashCode.Include
     @Id
@@ -17,8 +17,4 @@ public class Cidade {
 
     @Column(nullable = false)
     private String nome;
-
-    @ManyToOne
-    @JoinColumn(nullable = false)
-    private Estado estado;
 }

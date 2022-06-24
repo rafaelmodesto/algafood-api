@@ -1,15 +1,17 @@
-package com.algaworks.algafood.domain.model;
+package com.algaworks.algafood.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Restaurante {
+public class Cozinha {
 
     @EqualsAndHashCode.Include
     @Id
@@ -19,11 +21,9 @@ public class Restaurante {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false)
-    private BigDecimal taxaFrete;
+    @JsonIgnore
+    @OneToMany(mappedBy = "cozinha")
+    private List<Restaurante> restaurantes = new ArrayList<>();
 
-    @ManyToOne
-    @JoinColumn(nullable = false)
-    private Cozinha cozinha;
 
 }
