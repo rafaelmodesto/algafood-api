@@ -1,6 +1,6 @@
 package com.algaworks.algafood.infrastructure.repository.spec;
 
-import com.algaworks.algafood.model.Restaurante;
+import com.algaworks.algafood.domain.model.Restaurante;
 import lombok.AllArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 

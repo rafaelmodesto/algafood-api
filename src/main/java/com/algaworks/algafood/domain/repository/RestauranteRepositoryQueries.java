@@ -1,6 +1,6 @@
 package com.algaworks.algafood.domain.repository;
 
-import com.algaworks.algafood.model.Restaurante;
+import com.algaworks.algafood.domain.model.Restaurante;
 
 import java.math.BigDecimal;
 import java.util.List;

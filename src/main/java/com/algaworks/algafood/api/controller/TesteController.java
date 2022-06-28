@@ -2,7 +2,7 @@ package com.algaworks.algafood.api.controller;
 
 import static com.algaworks.algafood.infrastructure.repository.spec.RestauranteSpecs.*;
 
-import com.algaworks.algafood.model.Restaurante;
+import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.repository.RestauranteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
