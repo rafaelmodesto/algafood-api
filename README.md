@@ -6,6 +6,7 @@ como uma API RESTFULL. De forma resumida, ao final do projeto a API será capaz 
 
 Ferramentas/Techs
 - Java 17
+- Maven
 - Spring
   - SpringBoot
   - SpringData JPA
