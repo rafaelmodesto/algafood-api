@@ -7,6 +7,11 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import javax.validation.Valid;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -22,12 +27,16 @@ public class Restaurante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     @Column(nullable = false)
     private String nome;
 
+    @DecimalMin("0")
     @Column(nullable = false)
     private BigDecimal taxaFrete;
 
+    @Valid
+    @NotNull
     @ManyToOne
     @JoinColumn(nullable = false)
     private Cozinha cozinha;
