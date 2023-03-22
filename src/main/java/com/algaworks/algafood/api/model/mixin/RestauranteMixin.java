@@ -1,7 +1,6 @@
 package com.algaworks.algafood.api.model.mixin;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.algaworks.algafood.domain.model.Cozinha;
@@ -18,10 +17,10 @@ public abstract class RestauranteMixin {
   @JsonIgnore
   private Endereco endereco;
 
-  @JsonIgnore
+  //@JsonIgnore
   private LocalDateTime dataCadastro;
 
-  @JsonIgnore
+  //@JsonIgnore
   private LocalDateTime dataAtualizacao;
 
   @JsonIgnore
